@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Panel de gestión interna y formularios de Jags Technology.">
+  <meta name="theme-color" content="#020613">
+  <title>Panel de Formularios Internos | Jags Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/logo-escudo.png" type="image/png">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- HEADER UNIFICADO CON EL INDEX -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Jags Technology — Inicio">
+        <img class="brand-logo" src="assets/img/logo-escudo.png" width="44" height="44" alt="">
+        <span class="brand-text">
+          <strong>JAGS TECHNOLOGY</strong>
+          <span class="brand-sub">Medellín · Panel Interno</span>
+        </span>
+      </a>
+      <nav id="nav-principal" class="nav-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent btn-header" href="https://wa.me/573217823068?text=Hola%2C%20necesito%20soporte%20con%20el%20sistema" target="_blank" rel="noopener noreferrer">Soporte</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="hero" style="padding: 3rem 0; text-align: center;">
+      <div class="container">
+        <p class="eyebrow">Gestión Operativa y Base de Datos</p>
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Formularios Internos</h1>
+        <p class="lead mb-0" style="margin-inline: auto;">Módulo de control para registro de solicitudes, clientes, cotizaciones, órdenes de trabajo y personal autorizado.</p>
+      </div>
+    </header>
+
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        
+        <!-- Alerta de diseño -->
+        <div class="alert alert-info" role="status" style="background: rgba(49, 144, 221, 0.15); border: 1px solid rgba(49, 144, 221, 0.3); color: #e2f2fa; border-radius: 12px; padding: 15px; margin-bottom: 2rem;">
+          <strong>Vista de diseño operativo.</strong> Estos formularios permiten gestionar los registros de la base de datos <code>jags_technology</code>. Los códigos (S001, AC001, C001…) se adaptan al formato de las tablas.
+        </div>
+
+        <p class="small text-muted mb-2" style="font-weight: 600; color: var(--cyan) !important;">Navegación rápida entre formularios:</p>
+        
+        <!-- Índice de navegación interna estilizado -->
+        <nav class="nav nav-pills form-index mb-5" aria-label="Índice de formularios" style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a class="btn btn-sm btn-ghost" href="#solicitud">Solicitud</a>
+          <a class="btn btn-sm btn-ghost" href="#cliente">Cliente</a>
+          <a class="btn btn-sm btn-ghost" href="#cotizacion">Cotización</a>
+          <a class="btn btn-sm btn-ghost" href="#orden">Orden de trabajo</a>
+          <a class="btn btn-sm btn-ghost" href="#venta">Venta</a>
+          <a class="btn btn-sm btn-ghost" href="#garantia">Garantía</a>
+          <a class="btn btn-sm btn-ghost" href="#asesor">Asesor</a>
+          <a class="btn btn-sm btn-ghost" href="#tecnico">Técnico</a>
+          <a class="btn btn-sm btn-ghost" href="#proveedor">Proveedor</a>
+          <a class="btn btn-sm btn-ghost" href="#plan">Plan corporativo</a>
+          <a class="btn btn-sm btn-ghost" href="#asignar">Asignar proveedor</a>
+        </nav>
+
+        <p class="small text-muted mb-4">Los campos marcados con <span class="req-star" style="color: var(--accent);">*</span> son obligatorios.</p>
+
+        <!-- CONTENEDOR DE FORMULARIOS INTERNOS -->
+        <div style="display: grid; gap: 3rem;">
+
+          <!-- 1. SOLICITUD -->
+          <section class="form-section contact-card" id="solicitud" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Área Comercial / Clientes</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Solicitud de servicio <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: solicitud</span></h2>
+            <p class="text-muted mb-4">Registro inicial de requerimiento del cliente. Documento y servicio requerido.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_cliente_sol">Documento del cliente <span class="req-star">*</span></label>
+                  <input id="id_cliente_sol" name="id_cliente" type="text" class="form-control" required maxlength="15" pattern="[0-9]{6,15}" title="Entre 6 y 15 dígitos, solo números" placeholder="Cédula o NIT" inputmode="numeric">
+                  <small class="form-text text-muted">Solo números (6 a 15 dígitos). Debe estar previamente registrado.</small>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="tipo_servicio">Servicio requerido <span class="req-star">*</span></label>
+                  <select id="tipo_servicio" name="tipo_servicio" class="form-control" required>
+                    <option value="">Selecciona…</option>
+                    <option value="Mantenimiento de computadores">Reparación y mantenimiento de computadores</option>
+                    <option value="Sistemas de CCTV">Sistemas de CCTV (seguridad electrónica)</option>
+                    <option value="Redes de datos">Redes de datos</option>
+                    <option value="Control de acceso">Control de acceso</option>
+                    <option value="Sistemas contra incendios">Sistemas contra incendios</option>
+                    <option value="Desarrollo web">Desarrollo web</option>
+                    <option value="Recuperacion de datos">Recuperación de datos</option>
+                    <option value="Soporte especializado">Mantenimiento preventivo y soporte especializado</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="ciudad_servicio">Ciudad del servicio <span class="req-star">*</span></label>
+                  <input id="ciudad_servicio" name="ciudad_servicio" type="text" class="form-control" required maxlength="50" value="Medellín">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="mensaje">Descripción de la necesidad <span class="req-star">*</span></label>
+                  <textarea id="mensaje" name="mensaje" class="form-control" rows="3" maxlength="300" required placeholder="Describe brevemente la solicitud"></textarea>
+                  <small class="form-text text-muted">Máximo 300 caracteres.</small>
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_solicitud</code> (S001, S002…), <code>estado</code> (Pendiente), <code>fecha_creacion</code> (automática), <code>id_proveedor</code>.</div>
+              <button type="submit" class="btn btn-accent">Guardar Solicitud</button>
+            </form>
+          </section>
+
+          <!-- 2. REGISTRO DE CLIENTE -->
+          <section class="form-section contact-card" id="cliente" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Base de Clientes</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Registro de cliente <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: cliente</span></h2>
+            <p class="text-muted mb-4">Ingreso de datos generales del cliente natural o corporativo.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-12 mb-3">
+                  <label class="d-block mb-2">Tipo de cliente <span class="req-star">*</span></label>
+                  <div class="d-flex gap-4" style="gap: 20px;">
+                    <div><input type="radio" id="tc_natural" name="tipo_cliente" value="Natural" checked> <label for="tc_natural">Natural (persona)</label></div>
+                    <div><input type="radio" id="tc_corp" name="tipo_cliente" value="Corporativa"> <label for="tc_corp">Corporativa (empresa)</label></div>
+                  </div>
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="id_cliente">Documento (cédula o NIT) <span class="req-star">*</span></label>
+                  <input id="id_cliente" name="id_cliente" type="text" class="form-control" required maxlength="15" pattern="[0-9]{6,15}" title="Entre 6 y 15 dígitos" placeholder="Solo números">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="nombres">Nombres</label>
+                  <input id="nombres" name="nombres" type="text" class="form-control" maxlength="50">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="apellidos">Apellidos</label>
+                  <input id="apellidos" name="apellidos" type="text" class="form-control" maxlength="50">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="razon_social">Razón social (Corporativo)</label>
+                  <input id="razon_social" name="razon_social" type="text" class="form-control" maxlength="100">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="correo">Correo electrónico <span class="req-star">*</span></label>
+                  <input id="correo" name="correo" type="email" class="form-control" required maxlength="100">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="telefono">Teléfono</label>
+                  <input id="telefono" name="telefono" type="tel" class="form-control" maxlength="15" placeholder="3001234567">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="ciudad">Ciudad</label>
+                  <input id="ciudad" name="ciudad" type="text" class="form-control" maxlength="50" value="Medellín">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="direccion">Dirección</label>
+                  <input id="direccion" name="direccion" type="text" class="form-control" maxlength="100">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>fecha_registro</code> (fecha actual).</div>
+              <button type="submit" class="btn btn-accent">Guardar Cliente</button>
+            </form>
+          </section>
+
+          <!-- 3. COTIZACIÓN -->
+          <section class="form-section contact-card" id="cotizacion" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Área Comercial</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Cotización <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: cotizacion</span></h2>
+            <p class="text-muted mb-4">Elaborada por el asesor comercial a partir de una solicitud aprobada.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_solicitud">Código de la solicitud <span class="req-star">*</span></label>
+                  <input id="id_solicitud" name="id_solicitud" type="text" class="form-control" required maxlength="4" pattern="S[0-9]{3}" placeholder="S001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_asesor">Código del asesor comercial <span class="req-star">*</span></label>
+                  <input id="id_asesor" name="id_asesor" type="text" class="form-control" required maxlength="5" pattern="AC[0-9]{3}" placeholder="AC001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_plan">Código del plan corporativo</label>
+                  <input id="id_plan" name="id_plan" type="text" class="form-control" maxlength="5" pattern="PC[0-9]{3}" placeholder="PC001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="valor_cop">Valor total (COP) <span class="req-star">*</span></label>
+                  <input id="valor_cop" name="valor_cop" type="number" class="form-control" required placeholder="1500000" min="1" step="1000">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="detalle">Detalle de lo incluido <span class="req-star">*</span></label>
+                  <textarea id="detalle" name="detalle" class="form-control" rows="3" maxlength="300" required placeholder="Equipos, mano de obra, alcance..."></textarea>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="fecha_vigencia">Vigencia de la oferta <span class="req-star">*</span></label>
+                  <input id="fecha_vigencia" name="fecha_vigencia" type="date" class="form-control" required>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="meses_pactados">Meses pactados (soporte/garantía)</label>
+                  <input id="meses_pactados" name="meses_pactados" type="number" class="form-control" min="1" max="60">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_cotizacion</code> (C001…), <code>estado</code> (Emitida), <code>fecha_emision</code> (hoy).</div>
+              <button type="submit" class="btn btn-accent">Guardar Cotización</button>
+            </form>
+          </section>
+
+          <!-- 4. ORDEN DE TRABAJO -->
+          <section class="form-section contact-card" id="orden" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Coordinación Técnica</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Orden de trabajo <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: orden_trabajo</span></h2>
+            <p class="text-muted mb-4">Programación de la labor técnica a partir de una cotización aprobada.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_cotizacion">Código de cotización aprobada <span class="req-star">*</span></label>
+                  <input id="id_cotizacion" name="id_cotizacion" type="text" class="form-control" required maxlength="4" pattern="C[0-9]{3}" placeholder="C001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_tecnico">Código del técnico responsable <span class="req-star">*</span></label>
+                  <input id="id_tecnico" name="id_tecnico" type="text" class="form-control" required maxlength="4" pattern="T[0-9]{3}" placeholder="T001">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="descripcion">Descripción del trabajo y equipos <span class="req-star">*</span></label>
+                  <textarea id="descripcion" name="descripcion" class="form-control" rows="3" maxlength="300" required placeholder="Tipo, marca, modelo y serial de equipos a intervenir"></textarea>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="fecha_inicio">Fecha programada de inicio</label>
+                  <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_orden</code> (OT001…), <code>id_cliente</code>, <code>estado</code> (Programada).</div>
+              <button type="submit" class="btn btn-accent">Guardar Orden</button>
+            </form>
+          </section>
+
+          <!-- 5. VENTA -->
+          <section class="form-section contact-card" id="venta" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Área de Ventas</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Venta <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: venta</span></h2>
+            <p class="text-muted mb-4">Registro final al concluir satisfactoriamente el servicio o instalación.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_cotizacion_v">Código de la cotización <span class="req-star">*</span></label>
+                  <input id="id_cotizacion_v" name="id_cotizacion" type="text" class="form-control" required maxlength="4" pattern="C[0-9]{3}" placeholder="C001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="valor_total">Valor total facturado (COP) <span class="req-star">*</span></label>
+                  <input id="valor_total" name="valor_total" type="number" class="form-control" required min="1" step="1000">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="descripcion_v">Descripción del trabajo entregado <span class="req-star">*</span></label>
+                  <textarea id="descripcion_v" name="descripcion" class="form-control" rows="3" maxlength="300" required></textarea>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="fecha_finalizacion">Fecha de finalización <span class="req-star">*</span></label>
+                  <input id="fecha_finalizacion" name="fecha_finalizacion" type="date" class="form-control" required>
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_venta</code> (V001…).</div>
+              <button type="submit" class="btn btn-accent">Guardar Venta</button>
+            </form>
+          </section>
+
+          <!-- 6. GARANTÍA -->
+          <section class="form-section contact-card" id="garantia" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Postventa</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Garantía <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: garantia</span></h2>
+            <p class="text-muted mb-4">Registro de póliza o respaldo de garantía por venta realizada.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_venta">Código de la venta <span class="req-star">*</span></label>
+                  <input id="id_venta" name="id_venta" type="text" class="form-control" required maxlength="4" pattern="V[0-9]{3}" placeholder="V001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="meses_garantia">Tiempo de garantía (meses) <span class="req-star">*</span></label>
+                  <input id="meses_garantia" name="meses_garantia" type="number" class="form-control" required min="1" max="60">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="condicion">Condiciones y exclusiones</label>
+                  <textarea id="condicion" name="condicion" class="form-control" rows="3" maxlength="150"></textarea>
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_garantia</code> (G001…), <code>id_asesor</code>, <code>id_tecnico</code>, <code>fecha_vencimiento</code>.</div>
+              <button type="submit" class="btn btn-accent">Guardar Garantía</button>
+            </form>
+          </section>
+
+          <!-- 7. ASESOR COMERCIAL -->
+          <section class="form-section contact-card" id="asesor" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Administración</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Asesor comercial <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: asesor_comercial</span></h2>
+            <p class="text-muted mb-4">Registro de personal del área comercial.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="nombres_a">Nombres <span class="req-star">*</span></label>
+                  <input id="nombres_a" name="nombres" type="text" class="form-control" required maxlength="50">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="apellidos_a">Apellidos <span class="req-star">*</span></label>
+                  <input id="apellidos_a" name="apellidos" type="text" class="form-control" required maxlength="50">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="correo_a">Correo <span class="req-star">*</span></label>
+                  <input id="correo_a" name="correo" type="email" class="form-control" required maxlength="100">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="telefono_a">Teléfono</label>
+                  <input id="telefono_a" name="telefono" type="tel" class="form-control" maxlength="15">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_asesor</code> (AC001…), <code>activo</code> (Sí).</div>
+              <button type="submit" class="btn btn-accent">Guardar Asesor</button>
+            </form>
+          </section>
+
+          <!-- 8. TÉCNICO -->
+          <section class="form-section contact-card" id="tecnico" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Administración</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Técnico <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: tecnico</span></h2>
+            <p class="text-muted mb-4">Registro de personal operativo de soporte e instalaciones.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="nombres_t">Nombres <span class="req-star">*</span></label>
+                  <input id="nombres_t" name="nombres" type="text" class="form-control" required maxlength="50">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="apellidos_t">Apellidos <span class="req-star">*</span></label>
+                  <input id="apellidos_t" name="apellidos" type="text" class="form-control" required maxlength="50">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="correo_t">Correo <span class="req-star">*</span></label>
+                  <input id="correo_t" name="correo" type="email" class="form-control" required maxlength="100">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="telefono_t">Teléfono</label>
+                  <input id="telefono_t" name="telefono" type="tel" class="form-control" maxlength="15">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="especialidad">Especialidad <span class="req-star">*</span></label>
+                  <select id="especialidad" name="especialidad" class="form-control" required>
+                    <option value="">Selecciona…</option>
+                    <option value="Computadores">Computadores</option>
+                    <option value="CCTV y seguridad electronica">CCTV y seguridad electrónica</option>
+                    <option value="Redes de datos">Redes de datos</option>
+                    <option value="Control de acceso">Control de acceso</option>
+                    <option value="Sistemas contra incendios">Sistemas contra incendios</option>
+                    <option value="Desarrollo web">Desarrollo web</option>
+                    <option value="Recuperacion de datos">Recuperación de datos</option>
+                    <option value="Soporte especializado">Soporte especializado</option>
+                  </select>
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_tecnico</code> (T001…), <code>activo</code> (Sí).</div>
+              <button type="submit" class="btn btn-accent">Guardar Técnico</button>
+            </form>
+          </section>
+
+          <!-- 9. PROVEEDOR -->
+          <section class="form-section contact-card" id="proveedor" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Área de Compras</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Proveedor <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: proveedor</span></h2>
+            <p class="text-muted mb-4">Empresas o suministradores de equipos y materiales.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="nit">NIT <span class="req-star">*</span></label>
+                  <input id="nit" name="nit" type="text" class="form-control" required maxlength="15" pattern="[0-9]{9,15}" placeholder="Solo números">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="razon_social_p">Razón social <span class="req-star">*</span></label>
+                  <input id="razon_social_p" name="razon_social" type="text" class="form-control" required maxlength="100">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="contacto">Persona de contacto</label>
+                  <input id="contacto" name="contacto" type="text" class="form-control" maxlength="80">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="correo_p">Correo</label>
+                  <input id="correo_p" name="correo" type="email" class="form-control" maxlength="100">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="telefono_p">Teléfono</label>
+                  <input id="telefono_p" name="telefono" type="tel" class="form-control" maxlength="15">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="ciudad_p">Ciudad</label>
+                  <input id="ciudad_p" name="ciudad" type="text" class="form-control" maxlength="50" value="Medellín">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_proveedor</code> (PV001…), <code>activo</code> (Sí).</div>
+              <button type="submit" class="btn btn-accent">Guardar Proveedor</button>
+            </form>
+          </section>
+
+          <!-- 10. PLAN CORPORATIVO -->
+          <section class="form-section contact-card" id="plan" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Administración</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Plan corporativo <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: plan_corporativo</span></h2>
+            <p class="text-muted mb-4">Planes disponibles (Avanzado o Premium) para clientes corporativos.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="nombre">Nombre del plan <span class="req-star">*</span></label>
+                  <select id="nombre" name="nombre" class="form-control" required>
+                    <option value="">Selecciona…</option>
+                    <option value="Avanzado">Avanzado</option>
+                    <option value="Premium">Premium</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="modalidad">Modalidad <span class="req-star">*</span></label>
+                  <select id="modalidad" name="modalidad" class="form-control" required>
+                    <option value="">Selecciona…</option>
+                    <option value="Presencial">Presencial</option>
+                    <option value="Remota">Remota</option>
+                    <option value="Mixta">Mixta</option>
+                  </select>
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="descripcion_pl">Descripción <span class="req-star">*</span></label>
+                  <input id="descripcion_pl" name="descripcion" type="text" class="form-control" required maxlength="150">
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="alcance">Alcance</label>
+                  <input id="alcance" name="alcance" type="text" class="form-control" maxlength="200" placeholder="Equipos, puntos o visitas incluidas">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="garantia_meses">Garantía del plan (meses) <span class="req-star">*</span></label>
+                  <input id="garantia_meses" name="garantia_meses" type="number" class="form-control" required min="1" max="60">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> <code>id_plan</code> (PC001, PC002), <code>activo</code> (Sí).</div>
+              <button type="submit" class="btn btn-accent">Guardar Plan</button>
+            </form>
+          </section>
+
+          <!-- 11. ASIGNAR PROVEEDOR -->
+          <section class="form-section contact-card" id="asignar" style="padding: 35px; border-radius: 24px;">
+            <p class="form-who text-uppercase" style="color: var(--cyan); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em;">Área de Compras</p>
+            <h2 class="h4 text-white font-weight-bold" style="font-size: 1.5rem;">Asignar proveedor a una solicitud <span class="badge badge-tabla" style="background: var(--blue); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 6px;">Tabla: solicitud</span></h2>
+            <p class="text-muted mb-4">Vincular un proveedor a una solicitud existente que requiera insumos o equipos.</p>
+            <form action="#" method="post" class="solicitud-form">
+              <div class="form-row">
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_solicitud_ap">Código de la solicitud <span class="req-star">*</span></label>
+                  <input id="id_solicitud_ap" name="id_solicitud" type="text" class="form-control" required maxlength="4" pattern="S[0-9]{3}" placeholder="S001">
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                  <label for="id_proveedor">Código del proveedor <span class="req-star">*</span></label>
+                  <input id="id_proveedor" name="id_proveedor" type="text" class="form-control" required maxlength="5" pattern="PV[0-9]{3}" placeholder="PV001">
+                </div>
+              </div>
+              <div class="auto-note p-3 mb-3" style="background: rgba(25, 87, 161, 0.15); border-left: 3px solid var(--cyan); border-radius: 6px; font-size: 0.88rem;"><strong>Se completa solo:</strong> Actualiza <code>id_proveedor</code> en la tabla de la solicitud.</div>
+              <button type="submit" class="btn btn-accent">Asignar Proveedor</button>
+            </form>
+          </section>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER IDÉNTICO AL DEL INDEX -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/logo-escudo.png" width="40" height="40" alt="">
+        <div>
+          <p><strong>Jags Technology</strong> · Medellín</p>
+          <p class="muted">Panel de Gestión Interna · CESDE Desarrollo Web</p>
+        </div>
+      </div>
+      <p class="muted footer-team">Equipo: Erika Vázquez · Javier Gómez · Juan Camilo · Xiomara Muñoz · Maryluz Cardona</p>
+      <nav aria-label="Pie">
+        <a href="index.html">Inicio</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a class="fab-wa" href="https://wa.me/573217823068?text=Hola%2C%20necesito%20soporte%20con%20el%20sistema%20interno" target="_blank" rel="noopener noreferrer" aria-label="Soporte Técnico">
+    <span class="fab-pulse" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 12 23a11 11 0 0 0 8.5-19.5zM12 21.1a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9.1 9.1 0 1 1 12 21.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.1-.3c0-.1 0-.3 0-.4s-.6-1.5-.8-2-.4-.5-.6-.5h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3c.1.2 1.6 2.5 3.8 3.5 1.4.6 1.9.6 2.6.5.4-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.2-.2-.2-.4-.3z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPT PARA INTERACTIVIDAD Y NAVEGACIÓN -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
