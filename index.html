@@ -38,6 +38,7 @@
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <li><a href="Formulario.html">formulario</a></li>
         </ul>
       </nav>
       <a class="btn btn-accent btn-header" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -54,7 +55,7 @@
           <p class="tagline">Innovación, soporte y solución a tu alcance.</p>
           <p class="lead">Diseñamos, instalamos y damos soporte a sistemas de CCTV, redes y equipos de cómputo. Trabajamos principalmente con dueños y administradores de locales comerciales, y también con particulares que necesitan cámaras en casa. Atención a domicilio, sin sede abierta al público.</p>
           <div class="hero-actions">
-            <a class="btn btn-accent btn-lg" href="#solicitud">Solicitar servicio</a>
+            <a class="btn btn-accent btn-lg" href="Formulario.html">Solicitar servicio</a>
             <a class="btn btn-ghost btn-lg" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
           <ul class="hero-meta" aria-label="Datos de contacto rápidos">
@@ -384,43 +385,25 @@
       <div class="container">
     <div class="contact-grid">
       
-      <!-- COLUMNA IZQUIERDA: FORMULARIO -->
-      <div class="contact-form-wrapper">
-        <span class="subheading-sm">HABLEMOS</span>
-        <h2 class="section-title-lg">Solicita tu servicio</h2>
-        <p class="section-desc-sm">Completa el formulario para procesar tu solicitud o cotización a domicilio en Medellín.</p>
+<!-- COLUMNA IZQUIERDA: TARJETA INFORMATIVA / LLAMADO A COTIZAR -->
+      <div class="contact-cta-card">
+        <span class="subheading-sm">COTIZACIONES EN LÍNEA</span>
+        <h2 class="section-title-lg">¿Necesitas una cotización a tu medida?</h2>
+        <p class="section-desc">
+          En Jags Technology gestionamos tus requerimientos técnicos de forma rápida y estructurada. Accede a nuestra plataforma de formularios para solicitar la cotización del servicio o mantenimiento que requieres.
+        </p>
 
-        <form action="#" method="post" class="solicitud-form">
-          <div class="form-group">
-            <label for="id_cliente_sol">Documento del cliente (Cédula / NIT) <span class="req-star">*</span></label>
-            <input id="id_cliente_sol" name="id_cliente" type="text" placeholder="Tu cédula o NIT" required>
-          </div>
+        <!-- Puntos destacados rápidos -->
+        <ul class="cta-features">
+          <li><i class="fa-solid fa-check"></i> Reparación y mantenimiento informático</li>
+          <li><i class="fa-solid fa-check"></i> Instalación y soporte de CCTV y redes</li>
+          <li><i class="fa-solid fa-check"></i> Atención y diagnóstico a domicilio en Medellín</li>
+        </ul>
 
-          <div class="form-group">
-            <label for="tipo_servicio">Servicio de interés <span class="req-star">*</span></label>
-            <select id="tipo_servicio" name="tipo_servicio" required>
-              <option value="">Selecciona...</option>
-              <option value="Reparación y mantenimiento de computadores">Reparación y mantenimiento de computadores</option>
-              <option value="Sistemas de CCTV">Sistemas de CCTV (Seguridad electrónica)</option>
-              <option value="Redes de datos">Redes de datos</option>
-              <option value="Control de acceso">Control de acceso</option>
-              <option value="Sistemas contra incendios">Sistemas contra incendios</option>
-              <option value="Desarrollo web">Desarrollo web</option>
-              <option value="Recuperación de datos">Recuperación de datos</option>
-              <option value="Mantenimiento preventivo y soporte especializado">Mantenimiento preventivo y soporte especializado</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="mensaje">Detalle (opcional)</label>
-            <textarea id="mensaje" name="mensaje" rows="4" maxlength="300" placeholder="Cuéntanos brevemente qué necesitas"></textarea>
-            <small class="form-text-muted">Máximo 300 caracteres.</small>
-          </div>
-
-          <button type="submit" class="btn btn-accent btn-full">
-            Enviar Solicitud de Cotización
-          </button>
-        </form>
+        <!-- Botón directo a la página de formularios -->
+        <a href="formularios.html#solicitud" class="btn btn-accent btn-full text-center">
+          Ir a solicitar cotización <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
       </div>
 
         <!-- COLUMNA DERECHA: CONTACTO -->

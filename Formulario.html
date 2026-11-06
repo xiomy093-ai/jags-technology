@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Formulario completo de solicitud y cotización de servicios de Jags Technology en Medellín.">
+  <meta name="theme-color" content="#020613">
+  <title>Solicitud de Servicio y Cotización | Jags Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/logo-escudo.png" type="image/png">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- HEADER UNIFICADO -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Jags Technology — Inicio">
+        <img class="brand-logo" src="assets/img/logo-escudo.png" width="44" height="44" alt="">
+        <span class="brand-text">
+          <strong>JAGS TECHNOLOGY</strong>
+          <span class="brand-sub">Medellín · Desde 2014</span>
+        </span>
+      </a>
+      <nav id="nav-principal" class="nav-principal" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent btn-header" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- SECCIÓN DEL FORMULARIO DETALLADO -->
+    <section class="section section-contact" id="solicitud">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Canal oficial de solicitud</p>
+          <h2>Formulario de Solicitud y Cotización</h2>
+          <p class="section-lead">Ingresa tus datos personales y los detalles del requerimiento para procesar tu servicio a domicilio en Medellín y área metropolitana.</p>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-card" style="padding: 40px; border-radius: 28px;">
+              
+              <!-- Formulario con todos los campos solicitados -->
+              <form id="form-solicitud-completo" class="solicitud-form" action="#" method="post">
+                <div class="form-row">
+                  
+                  <!-- Nombre completo -->
+                  <div class="form-group col-md-12 mb-3">
+                    <label for="sol_nombre">Nombre completo <span class="req-star" aria-hidden="true">*</span></label>
+                    <input id="sol_nombre" name="nombre" type="text" class="form-control" placeholder="Ej. Pepito Perez" required maxlength="80">
+                  </div>
+
+                  <!-- Documento (Cédula o NIT) -->
+                  <div class="form-group col-md-6 mb-3">
+                    <label for="id_cliente_sol">Documento (Cédula / NIT) <span class="req-star" aria-hidden="true">*</span></label>
+                    <input id="id_cliente_sol" name="id_cliente" type="text" class="form-control" placeholder="Tu cédula o NIT" required maxlength="15" inputmode="numeric">
+                  </div>
+
+                  <!-- Correo electrónico -->
+                  <div class="form-group col-md-6 mb-3">
+                    <label for="sol_correo">Correo electrónico <span class="req-star" aria-hidden="true">*</span></label>
+                    <input id="sol_correo" name="correo" type="email" class="form-control" placeholder="ejemplo@correo.com" required maxlength="100">
+                  </div>
+
+                  <!-- Ciudad y Barrio -->
+                  <div class="form-group col-md-6 mb-3">
+                    <label for="sol_ciudad">Ciudad <span class="req-star" aria-hidden="true">*</span></label>
+                    <input id="sol_ciudad" name="ciudad" type="text" class="form-control" value="Medellín" required maxlength="50">
+                  </div>
+
+                  <div class="form-group col-md-6 mb-3">
+                    <label for="sol_barrio">Barrio <span class="req-star" aria-hidden="true">*</span></label>
+                    <input id="sol_barrio" name="barrio" type="text" class="form-control" placeholder="Ej. El Poblado, Laureles" required maxlength="50">
+                  </div>
+
+                  <!-- Dirección -->
+                  <div class="form-group col-12 mb-3">
+                    <label for="sol_direccion">Dirección exacta <span class="req-star" aria-hidden="true">*</span></label>
+                    <input id="sol_direccion" name="direccion" type="text" class="form-control" placeholder="Calle 00 # 00 - 00" required maxlength="100">
+                  </div>
+
+                  <!-- Servicio de interés -->
+                  <div class="form-group col-12 mb-3">
+                    <label for="tipo_servicio">Servicio de interés <span class="req-star" aria-hidden="true">*</span></label>
+                    <select id="tipo_servicio" name="tipo_servicio" class="form-control" required>
+                      <option value="">Selecciona un servicio…</option>
+                      <option value="Reparación y mantenimiento de computadores">Reparación y mantenimiento de computadores</option>
+                      <option value="Sistemas de CCTV">Sistemas de CCTV (Seguridad electrónica)</option>
+                      <option value="Redes de datos">Redes de datos</option>
+                      <option value="Control de acceso">Control de acceso</option>
+                      <option value="Sistemas contra incendios">Sistemas contra incendios</option>
+                      <option value="Desarrollo web">Desarrollo web</option>
+                      <option value="Recuperación de datos">Recuperación de datos</option>
+                      <option value="Mantenimiento preventivo y soporte especializado">Mantenimiento preventivo y soporte especializado</option>
+                    </select>
+                  </div>
+
+                  <!-- Detalle / Mensaje -->
+                  <div class="form-group col-12 mb-4">
+                    <label for="mensaje">Detalle de tu necesidad <span class="req-star" aria-hidden="true">*</span></label>
+                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" maxlength="300" required placeholder="Describe brevemente los equipos, fallas o el alcance de lo que requieres"></textarea>
+                    <small class="form-text text-muted">Máximo 300 caracteres.</small>
+                  </div>
+
+                </div>
+
+                <!-- Botones de Acción (Enviar Cotización y WhatsApp) -->
+                <div class="d-flex flex-column flex-sm-row gap-3 mt-4" style="gap: 15px;">
+                  <button type="submit" class="btn btn-accent btn-lg flex-grow-1" style="width: 100%;">
+                    Enviar Solicitud de Cotización
+                  </button>
+                  <a href="https://wa.me/573217823068?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20enviar%20mi%20cotizaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-lg text-center" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    Escribir por WhatsApp
+                  </a>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER IDÉNTICO AL DEL INDEX -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/img/logo-escudo.png" width="40" height="40" alt="">
+        <div>
+          <p><strong>Jags Technology</strong> · Medellín</p>
+          <p class="muted">Web de presencia · CESDE Desarrollo Web</p>
+        </div>
+      </div>
+      <p class="muted footer-team">Equipo: Erika Vázquez · Javier Gómez · Juan Camilo · Xiomara Muñoz · Maryluz Cardona</p>
+      <nav aria-label="Pie">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#galeria">Galería</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a class="fab-wa" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <span class="fab-pulse" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 2.1 17.2L1 23l5.9-1.1A11 11 0 0 0 12 23a11 11 0 0 0 8.5-19.5zM12 21.1a9.1 9.1 0 1 1-4.6-1.3l-.3-.2-3.5.7.7-3.4-.2-.3A9.1 9.1 0 1 1 12 21.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.5 7.5 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.1-.3c0-.1 0-.3 0-.4s-.6-1.5-.8-2-.4-.5-.6-.5h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3c.1.2 1.6 2.5 3.8 3.5 1.4.6 1.9.6 2.6.5.4-.1 1.6-.6 1.8-1.3s.2-1.1.2-1.2-.2-.2-.4-.3z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPT PARA PROCESAR LOS DATOS Y ENVIAR A WHATSAPP CON FORMATO COMPLETO -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var formCompleto = document.getElementById('form-solicitud-completo');
+      if (formCompleto) {
+        formCompleto.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          var nombre = document.getElementById('sol_nombre').value.trim();
+          var cliente = document.getElementById('id_cliente_sol').value.trim();
+          var correo = document.getElementById('sol_correo').value.trim();
+          var ciudad = document.getElementById('sol_ciudad').value.trim();
+          var barrio = document.getElementById('sol_barrio').value.trim();
+          var direccion = document.getElementById('sol_direccion').value.trim();
+          var servicio = document.getElementById('tipo_servicio').value.trim();
+          var detalle = document.getElementById('mensaje').value.trim();
+
+          // Estructurar el mensaje completo para WhatsApp
+          var textoWa = "Hola Jags Technology, quiero solicitar una cotización con los siguientes datos:\n\n" +
+                        "*Nombre:* " + nombre + "\n" +
+                        "*Documento:* " + cliente + "\n" +
+                        "*Correo:* " + correo + "\n" +
+                        "*Ubicación:* " + ciudad + " - Barrio " + barrio + "\n" +
+                        "*Dirección:* " + direccion + "\n" +
+                        "*Servicio:* " + servicio + "\n" +
+                        "*Detalle:* " + detalle;
+
+          var urlWa = "https://wa.me/573217823068?text=" + encodeURIComponent(textoWa);
+          window.open(urlWa, '_blank', 'noopener,noreferrer');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
