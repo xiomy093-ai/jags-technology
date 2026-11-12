@@ -38,7 +38,8 @@
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
-          <li><a href="Cotizacion.html">formulario</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="Formulario.html">formulario</a></li>
         </ul>
       </nav>
       <a class="btn btn-accent btn-header" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -81,10 +82,40 @@
 
     <section id="nosotros" class="section" aria-labelledby="nosotros-title">
       <div class="container about-grid">
-        <header class="section-head left">
-          <p class="eyebrow">Quiénes somos</p>
-          <h2 id="nosotros-title">Un centro de soporte especializado, no una tienda</h2>
-        </header>
+        
+        <!-- COLUMNA IZQUIERDA: TÍTULO + WIDGET INTERACTIVO DE COBERTURA -->
+        <div class="about-left-col" style="display: flex; flex-direction: column; gap: 2rem;">
+          <header class="section-head left" style="margin-bottom: 0;">
+            <p class="eyebrow">Quiénes somos</p>
+            <h2 id="nosotros-title">Un centro de soporte especializado, no una tienda</h2>
+          </header>
+
+          <!-- Tarjeta interactiva de cobertura en Medellín -->
+          <div class="contact-card" style="padding: 28px; border-radius: 24px;">
+            <span class="eyebrow" style="margin-bottom: 0.5rem;">Cobertura Área Metropolitana</span>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Atención a domicilio en Medellín</h3>
+            <p style="font-size: 0.9rem; color: var(--muted); margin-bottom: 16px;">
+              Selecciona tu zona para consultar disponibilidad de desplazamiento técnico:
+            </p>
+
+            <!-- Botones de zonas -->
+            <div class="zone-buttons" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px;">
+              <button type="button" class="zone-btn active" data-zone="poblado" style="padding: 10px 12px; background: rgba(49, 144, 221, 0.2); border: 1px solid var(--cyan); color: #fff; border-radius: 12px; cursor: pointer; font-family: var(--display); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">El Poblado</button>
+              <button type="button" class="zone-btn" data-zone="laureles" style="padding: 10px 12px; background: rgba(8, 14, 28, 0.88); border: 1px solid var(--line); color: var(--muted); border-radius: 12px; cursor: pointer; font-family: var(--display); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">Laureles / Estadio</button>
+              <button type="button" class="zone-btn" data-zone="centro" style="padding: 10px 12px; background: rgba(8, 14, 28, 0.88); border: 1px solid var(--line); color: var(--muted); border-radius: 12px; cursor: pointer; font-family: var(--display); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">Medellín Centro</button>
+              <button type="button" class="zone-btn" data-zone="sur" style="padding: 10px 12px; background: rgba(8, 14, 28, 0.88); border: 1px solid var(--line); color: var(--muted); border-radius: 12px; cursor: pointer; font-family: var(--display); font-size: 0.85rem; font-weight: 600; transition: all 0.2s;">Itagüí / Envigado</button>
+            </div>
+
+            <!-- Pantalla dinámica de respuesta -->
+            <div id="zone-info" style="padding: 14px 16px; background: rgba(2, 6, 19, 0.65); border-radius: 14px; border-left: 3px solid var(--accent);">
+              <p id="zone-text" style="margin: 0; font-size: 0.88rem; color: var(--text); line-height: 1.5;">
+                📍 <strong style="color: #fff;">El Poblado:</strong> Alta disponibilidad para soporte de redes y sistemas CCTV. Visita técnica programada en menos de 24 horas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: INFORMACIÓN CORPORATIVA + FUNDADOR -->
         <div class="about-copy">
           <p>En <strong>Jags Technology</strong> (JAGSTECHNOLOGY) ofrecemos servicios de alta calidad: soporte técnico informático —reparación de equipos y recuperación de datos—, diseño, instalación y mantenimiento de redes de datos, control de acceso, circuitos cerrados de televisión (CCTV) y sistemas contra incendios.</p>
           <p><strong>A quién ayudamos.</strong> El público principal son dueños, administradores o encargados de locales comerciales (tiendas, oficinas, consultorios, bodegas), de 25 a 50 años. También atendemos hogares particulares que necesitan cámaras, además de empresas, instituciones educativas y estudiantes que quieran mantener su infraestructura digital y de seguridad protegida y optimizada.</p>
@@ -97,94 +128,10 @@
             </div>
           </aside>
         </div>
+
       </div>
     </section>
-
-    <section id="servicios" class="section section-dark" aria-labelledby="servicios-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow">Catálogo</p>
-          <h2 id="servicios-title">Ocho servicios, un solo equipo</h2>
-          <p class="section-lead">Lo más demandado es seguridad electrónica: CCTV, control de acceso, alarmas y soluciones relacionadas. No operamos como almacén: proveemos los equipos necesarios (cámaras, cerraduras, cableado) para las instalaciones contratadas.</p>
-        </header>
-        <div class="cards">
-          <article class="card card-featured">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">01</span>
-              <p class="card-badge">Mayor demanda</p>
-            </div>
-            <h3>Sistemas de CCTV (seguridad electrónica)</h3>
-            <p>Diseño, instalación y mantenimiento de circuitos cerrados de televisión, monitoreo y seguridad electrónica integral.</p>
-            <p class="price muted">Precio por cotizar · Garantía según plan (hasta 1 año)</p>
-            <a class="btn btn-sm btn-accent" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20CCTV%20%2F%20seguridad%20electr%C3%B3nica" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">02</span>
-            </div>
-            <h3>Reparación y mantenimiento de computadores</h3>
-            <p>Mantenimiento preventivo y correctivo, diagnóstico de hardware y optimización de software.</p>
-            <p class="price">Desde <strong>$80.000 COP</strong> · Garantía según plan</p>
-            <a class="btn btn-sm btn-accent" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20reparaci%C3%B3n%20de%20computadores" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">03</span>
-            </div>
-            <h3>Redes de datos</h3>
-            <p>Instalación de redes de datos, cableado estructurado, Wi-Fi, routers, switches y puntos POS.</p>
-            <p class="price muted">Precio por cotizar · Garantía según plan</p>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20redes%20de%20datos" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">04</span>
-            </div>
-            <h3>Control de acceso</h3>
-            <p>Controles biométricos, cerraduras electrónicas y registro de personal para empresas y unidades.</p>
-            <p class="price muted">Precio por cotizar · Garantía según plan</p>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20control%20de%20acceso" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">05</span>
-            </div>
-            <h3>Sistemas contra incendios</h3>
-            <p>Diseño e instalación de detectores de humo, alarmas y sistemas de prevención de riesgos.</p>
-            <p class="price muted">Precio por cotizar · Garantía según plan</p>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20sistemas%20contra%20incendios" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">06</span>
-            </div>
-            <h3>Desarrollo web</h3>
-            <p>Sitios y páginas web a la medida para potenciar la presencia digital de tu negocio.</p>
-            <p class="price">Desde <strong>$600.000 COP</strong> · Garantía según plan</p>
-            <a class="btn btn-sm btn-accent" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20desarrollo%20web" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">07</span>
-            </div>
-            <h3>Recuperación de datos</h3>
-            <p>Recuperación en discos mecánicos, USB, SSD y arreglos RAID, según evaluación técnica.</p>
-            <p class="price muted">Según evaluación · Garantía según caso</p>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20recuperaci%C3%B3n%20de%20datos" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-          <article class="card">
-            <div class="card-top">
-              <span class="card-index" aria-hidden="true">08</span>
-            </div>
-            <h3>Mantenimiento preventivo y soporte en sitio o remoto</h3>
-            <p>Soporte especializado para infraestructura tecnológica: visitas en sitio o asistencia remota, e instalación de software.</p>
-            <p class="price muted">Precio por cotizar · Garantía según plan</p>
-            <a class="btn btn-sm btn-ghost" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar%20mantenimiento%20preventivo%20y%20soporte" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
+    
     <section id="por-que" class="section" aria-labelledby="porque-title">
       <div class="container">
         <header class="section-head">
@@ -329,55 +276,126 @@
       </figure>
     </div>
 
+    <!-- SECCIÓN DE PREGUNTAS FRECUENTES + FORMULARIO DE RESEÑAS -->
     <section id="faq" class="section section-alt" aria-labelledby="faq-title">
       <div class="container faq-layout">
-        <header class="section-head left">
-          <p class="eyebrow">Dudas frecuentes</p>
-          <h2 id="faq-title">Antes de contratar</h2>
-          <p class="section-lead">Respuestas claras para que pases de la web a una cotización en un clic.</p>
-        </header>
-        <div class="faq-list">
-          <details class="faq-item" open>
-            <summary>¿Van a domicilio o tienen local físico?</summary>
-            <p>Atendemos a domicilio y con recogida temporal de equipos. No hay sede abierta al público; por eso este sitio no incluye mapa.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Cuáles son los tiempos de instalación de CCTV, redes o puntos POS?</summary>
-            <p>Dependen del alcance (número de cámaras o puntos, cableado existente y acceso al sitio). En la cotización te indicamos el tiempo estimado para tu caso. Escríbenos por WhatsApp para agendar la visita.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Con qué equipos o marcas trabajan?</summary>
-            <p>No operamos como tienda de marcas fijas. Proveemos los equipos necesarios para la instalación contratada (cámaras, cerraduras, cableado y afines) y te proponemos lo adecuado en la cotización, según el proyecto.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿La cotización incluye cableado y configuración?</summary>
-            <p>La cotización detalla lo que entra en el trabajo: equipos, cableado e instalación o configuración cuando apliquen al servicio contratado. Lo dejamos explícito antes de iniciar.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿La visita o el diagnóstico tienen costo?</summary>
-            <p>Varía según el servicio y el desplazamiento. Te confirmamos el valor al solicitar la visita por WhatsApp, antes de ir.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Qué cubre la garantía de CCTV?</summary>
-            <p>Los sistemas de CCTV incluyen 1 año de garantía según el plan (Básico: 4 cámaras IP; Empresarial: 16 o más cámaras y servidor cloud). Cubre el respaldo técnico del trabajo instalado de acuerdo con ese plan.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Ofrecen soporte después de la instalación?</summary>
-            <p>Sí. El respaldo técnico está incluido según el plan. También puedes contratar mantenimiento preventivo y soporte especializado en sitio o remoto para mantener la operación estable.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Cuál es el servicio con mayor demanda?</summary>
-            <p>Seguridad electrónica: CCTV, control de acceso, alarmas y soluciones relacionadas.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Venden equipos sueltos como tienda?</summary>
-            <p>No. No somos almacén de venta masiva. Proveemos cámaras, cerraduras, cableado y demás insumos necesarios para ejecutar las instalaciones contratadas.</p>
-          </details>
-          <details class="faq-item">
-            <summary>¿Cómo solicito un servicio?</summary>
-            <p>Usa el formulario de esta página o escríbenos al WhatsApp +57 321 7823068. También puedes escribir a jagstechnology@gmail.com o a Instagram @jagstechnologi. Horario: lunes a sábado, 9:00 a. m. – 6:00 p. m.</p>
-          </details>
+        
+        <!-- COLUMNA IZQUIERDA: FORMULARIO INTERACTIVO DE RESEÑAS Y CALIFICACIÓN -->
+        <div class="contact-card" style="padding: 32px; border-radius: 24px;">
+          <span class="eyebrow">EXPERIENCIA DEL CLIENTE</span>
+          <h2 id="faq-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Déjanos tu opinión</h2>
+          <p class="section-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+            ¿Has contratado nuestros servicios en Medellín? Califica tu experiencia y comparte tu comentario con nosotros.
+          </p>
+
+          <!-- Formulario interactivo -->
+          <form id="form-reseña" class="solicitud-form">
+            <div class="form-group mb-3">
+              <label for="nombre_resena" style="font-size: 0.9rem;">Tu Nombre o Empresa <span class="req-star">*</span></label>
+              <input id="nombre_resena" type="text" class="form-control" placeholder="Ej. Juan Pérez / Local Comercial" required maxlength="50" style="padding: 0.75rem 1rem;">
+            </div>
+
+            <div class="form-group mb-3">
+              <label style="font-size: 0.9rem;">Calificación del servicio <span class="req-star">*</span></label>
+              <!-- Sistema de estrellas interactivo -->
+              <div class="rating-stars" style="display: flex; gap: 8px; font-size: 1.5rem; cursor: pointer; color: #cbd5e1; margin-top: 5px;">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <input type="hidden" id="puntuacion_estrellas" value="5" required>
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="comentario_resena" style="font-size: 0.9rem;">Comentario o reseña <span class="req-star">*</span></label>
+              <textarea id="comentario_resena" rows="3" class="form-control" placeholder="¿Cómo fue la atención a domicilio y el soporte técnico?" required maxlength="250" style="padding: 0.75rem 1rem;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-full" style="width: 100%; padding: 12px;">
+              Enviar Reseña <i class="fa-solid fa-paper-plane ml-2"></i>
+            </button>
+          </form>
+
+          <!-- Mensaje de éxito con botón para volver a opinar (inicialmente oculto con display: none) -->
+          <div id="mensaje-exito" style="display: none; margin-top: 20px; padding: 25px; background: rgba(37, 211, 102, 0.12); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 16px; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">🎉</div>
+            <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 8px;">¡Muchas gracias por tu reseña!</h3>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">Tu opinión ya se encuentra publicada en el carrusel inferior.</p>
+            <button type="button" id="btn-otra-resena" class="btn btn-ghost" style="width: 100%; padding: 10px; border-color: #25d366; color: #25d366;">
+              ¿Quieres dejar otra reseña?
+            </button>
+          </div>
         </div>
+
+        <!-- COLUMNA DERECHA: PREGUNTAS FRECUENTES -->
+        <div class="faq-right-column">
+          <div style="margin-bottom: 24px;">
+            <span class="eyebrow">DUDAS FRECUENTES</span>
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Antes de contratar</h2>
+            <p class="section-lead" style="margin-bottom: 0;">Respuestas claras para que pases de la web a una cotización en un clic.</p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>¿Van a domicilio o tienen local físico?</summary>
+              <p>Atendemos a domicilio y con recogida temporal de equipos. No hay sede abierta al público; por eso este sitio no incluye mapa.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuáles son los tiempos de instalación de CCTV, redes o puntos POS?</summary>
+              <p>Dependen del alcance (número de cámaras o puntos, cableado existente y acceso al sitio). En la cotización te indicamos el tiempo estimado para tu caso. Escríbenos por WhatsApp para agendar la visita.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Con qué equipos o marcas trabajan?</summary>
+              <p>No operamos como tienda de marcas fijas. Proveemos los equipos necesarios para la instalación contratada (cámaras, cerraduras, cableado y afines) y te proponemos lo adecuado en la cotización, según el proyecto.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿La cotización incluye cableado y configuración?</summary>
+              <p>La cotización detalla lo que entra en el trabajo: equipos, cableado e instalación o configuración cuando apliquen al servicio contratado. Lo dejamos explícito antes de iniciar.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿La visita o el diagnóstico tienen costo?</summary>
+              <p>Varía según el servicio y el desplazamiento. Te confirmamos el valor al solicitar la visita por WhatsApp, antes de ir.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué cubre la garantía de CCTV?</summary>
+              <p>Los sistemas de CCTV incluyen 1 año de garantía según el plan (Básico: 4 cámaras IP; Empresarial: 16 o más cámaras y servidor cloud). Cubre el respaldo técnico del trabajo instalado de acuerdo con ese plan.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Ofrecen soporte después de la instalación?</summary>
+              <p>Sí. El respaldo técnico está incluido según el plan. También puedes contratar mantenimiento preventivo y soporte especializado en sitio o remoto para mantener la operación estable.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuál es el servicio con mayor demanda?</summary>
+              <p>Seguridad electrónica: CCTV, control de acceso, alarmas y soluciones relacionadas.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Venden equipos sueltos como tienda?</summary>
+              <p>No. No somos almacén de venta masiva. Proveemos cámaras, cerraduras, cableado y demás insumos necesarios para ejecutar las instalaciones contratadas.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cómo solicito un servicio?</summary>
+              <p>Usa el formulario de esta página o escríbenos al WhatsApp +57 321 7823068. También puedes escribir a jagstechnology@gmail.com o a Instagram @jagstechnology. Horario: lunes a sábado, 9:00 a. m. – 6:00 p. m.</p>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN DEBAJO DE TODO EL ANCHO: CARRUSEL EN VIVO DE RESEÑAS -->
+    <section id="resenas" class="section section-dark testimonials-marquee-section" aria-labelledby="testimoniales-title">
+      <div class="container section-head">
+        <p class="eyebrow">OPINIONES DE NUESTROS CLIENTES</p>
+        <h2 id="testimoniales-title">Lo que dicen de Jags Technology</h2>
+        <p class="section-lead">Reseñas reales de locales comerciales y hogares que han confiado en nuestro servicio a domicilio en Medellín.</p>
+      </div>
+
+      <!-- Carrusel automático de 2 líneas donde caerán las nuevas reseñas -->
+      <div class="marquee-container">
+        <div class="marquee-track marquee-left" id="marquee-line-1"></div>
+        <div class="marquee-track marquee-right" id="marquee-line-2"></div>
       </div>
     </section>
 
@@ -401,7 +419,7 @@
         </ul>
 
         <!-- Botón directo a la página de formularios -->
-        <a href="formularios.html#solicitud" class="btn btn-accent btn-full text-center">
+        <a href="Formulario.html" class="btn btn-accent btn-full text-center">
           Ir a solicitar cotización <i class="fa-solid fa-arrow-right ml-2"></i>
         </a>
       </div>
