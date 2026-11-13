@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto, FAQ y Reseñas | Jags Technology</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/logo-escudo.png" type="image/png">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/logo-escudo.png" width="44" height="44" alt=""><strong>JAGS TECHNOLOGY</strong></a>
+      <nav id="nav-principal" class="nav-principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="planes.html">Planes</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html" style="color: var(--cyan);">Contacto y FAQ</a></li>
+          <li><a href="Formulario.html">Cotizar</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent btn-header" href="https://wa.me/573217823068" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECCIÓN FAQ Y FORMULARIO DE RESEÑAS -->
+    <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+      <div class="container faq-layout">
+        <div class="contact-card" style="padding: 32px; border-radius: 24px;">
+          <span class="eyebrow">EXPERIENCIA DEL CLIENTE</span>
+          <h2 id="faq-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Déjanos tu opinión</h2>
+          <p class="section-desc" style="font-size: 0.95rem; margin-bottom: 20px;">¿Has contratado nuestros servicios en Medellín? Califica tu experiencia[cite: 10].</p>
+
+          <form id="form-reseña" class="solicitud-form">
+            <div class="form-group mb-3">
+              <label for="nombre_resena">Tu Nombre o Empresa <span class="req-star">*</span></label>
+              <input id="nombre_resena" type="text" class="form-control" placeholder="Ej. Juan Pérez" required maxlength="50">
+            </div>
+            <div class="form-group mb-3">
+              <label>Calificación del servicio <span class="req-star">*</span></label>
+              <div class="rating-stars" style="display: flex; gap: 8px; font-size: 1.5rem; cursor: pointer; color: #cbd5e1; margin-top: 5px;">
+                <span class="star" data-value="1">★</span><span class="star" data-value="2">★</span><span class="star" data-value="3">★</span><span class="star" data-value="4">★</span><span class="star" data-value="5">★</span>
+              </div>
+              <input type="hidden" id="puntuacion_estrellas" value="5" required>
+            </div>
+            <div class="form-group mb-4">
+              <label for="comentario_resena">Comentario o reseña <span class="req-star">*</span></label>
+              <textarea id="comentario_resena" rows="3" class="form-control" placeholder="¿Cómo fue la atención a domicilio?" required maxlength="250"></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent btn-full" style="width: 100%; padding: 12px;">Enviar Reseña</button>
+          </form>
+
+          <div id="mensaje-exito" style="display: none; margin-top: 20px; padding: 25px; background: rgba(37, 211, 102, 0.12); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 16px; text-align: center;">
+            <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 8px;">¡Muchas gracias por tu reseña!</h3>
+            <button type="button" id="btn-otra-resena" class="btn btn-ghost" style="width: 100%; padding: 10px; border-color: #25d366; color: #25d366;">¿Quieres dejar otra reseña?</button>
+          </div>
+        </div>
+
+        <div class="faq-right-column">
+          <div style="margin-bottom: 24px;">
+            <span class="eyebrow">DUDAS FRECUENTES</span>
+            <h2>Antes de contratar</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open><summary>¿Van a domicilio o tienen local físico?</summary><p>Atendemos a domicilio y con recogida temporal de equipos. No hay sede abierta al público[cite: 10].</p></details>
+            <details class="faq-item"><summary>¿Con qué equipos o marcas trabajan?</summary><p>Proveemos los equipos necesarios para la instalación contratada (cámaras, cerraduras, cableado) según el proyecto[cite: 10].</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARRUSEL INFINITO DE RESEÑAS -->
+    <section class="section section-dark testimonials-marquee-section">
+      <div class="container section-head">
+        <p class="eyebrow">OPINIONES DE NUESTROS CLIENTES</p>
+        <h2>Lo que dicen de Jags Technology</h2>
+      </div>
+      <div class="marquee-container">
+        <div class="marquee-track marquee-left" id="marquee-line-1"></div>
+        <div class="marquee-track marquee-right" id="marquee-line-2"></div>
+      </div>
+    </section>
+
+    <!-- DATOS DE CONTACTO -->
+    <section id="contacto" class="section section-contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-cta-card">
+            <span class="subheading-sm">COTIZACIONES EN LÍNEA</span>
+            <h2>¿Necesitas una cotización a tu medida?</h2>
+            <p class="section-desc">Accede a nuestra plataforma de formularios para solicitar la cotización del servicio o mantenimiento que requieres.</p>
+            <a href="Formulario.html" class="btn btn-accent btn-full text-center">Ir a solicitar cotización</a>
+          </div>
+          <address class="contact-card">
+            <img class="contact-logo" src="assets/img/logo-escudo.png" width="56" height="56" alt="">
+            <h3 class="not-italic">Jags Technology</h3>
+            <dl class="contact-list">
+              <div><dt>WhatsApp</dt><dd><a href="https://wa.me/573217823068">+57 321 7823068</a></dd></div>
+              <div><dt>Correo</dt><dd><a href="mailto:jagstechnology@gmail.com">jagstechnology@gmail.com</a></dd></div>
+            </dl>
+          </address>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand"><p><strong>Jags Technology</strong> · Contacto</p></div>
+      <nav><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a></nav>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
