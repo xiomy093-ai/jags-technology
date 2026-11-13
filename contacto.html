@@ -3,15 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#020613">
   <title>Contacto, FAQ y Reseñas | Jags Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="assets/img/logo-escudo.png" type="image/png">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- HEADER UNIFICADO -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/logo-escudo.png" width="44" height="44" alt=""><strong>JAGS TECHNOLOGY</strong></a>
-      <nav id="nav-principal" class="nav-principal">
+      <a class="brand" href="index.html" aria-label="Jags Technology — Inicio">
+        <img class="brand-logo" src="assets/img/logo-escudo.png" width="44" height="44" alt="">
+        <span class="brand-text">
+          <strong>JAGS TECHNOLOGY</strong>
+          <span class="brand-sub">Medellín · Desde 2014</span>
+        </span>
+      </a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="nav-principal" class="nav-principal" aria-label="Principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="servicios.html">Servicios</a></li>
@@ -21,98 +39,194 @@
           <li><a href="Formulario.html">Cotizar</a></li>
         </ul>
       </nav>
-      <a class="btn btn-accent btn-header" href="https://wa.me/573217823068" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a class="btn btn-accent btn-header" href="https://wa.me/573217823068?text=Hola%2C%20vi%20la%20web%20de%20Jags%20y%20quiero%20cotizar" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
   </header>
 
-  <main>
-    <!-- SECCIÓN FAQ Y FORMULARIO DE RESEÑAS -->
+  <main id="contenido">
+    
+    <!-- SECCIÓN 1: FAQ Y FORMULARIO DE RESEÑAS (DOS COLUMNAS) -->
     <section id="faq" class="section section-alt" aria-labelledby="faq-title">
       <div class="container faq-layout">
+        
+        <!-- COLUMNA IZQUIERDA: FORMULARIO DE RESEÑAS -->
         <div class="contact-card" style="padding: 32px; border-radius: 24px;">
           <span class="eyebrow">EXPERIENCIA DEL CLIENTE</span>
           <h2 id="faq-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Déjanos tu opinión</h2>
-          <p class="section-desc" style="font-size: 0.95rem; margin-bottom: 20px;">¿Has contratado nuestros servicios en Medellín? Califica tu experiencia[cite: 10].</p>
+          <p class="section-desc" style="font-size: 0.95rem; margin-bottom: 20px;">
+            ¿Has contratado nuestros servicios en Medellín? Califica tu experiencia y comparte tu comentario con nosotros
+          </p>
 
           <form id="form-reseña" class="solicitud-form">
             <div class="form-group mb-3">
-              <label for="nombre_resena">Tu Nombre o Empresa <span class="req-star">*</span></label>
-              <input id="nombre_resena" type="text" class="form-control" placeholder="Ej. Juan Pérez" required maxlength="50">
+              <label for="nombre_resena" style="font-size: 0.9rem;">Tu Nombre o Empresa <span class="req-star">*</span></label>
+              <input id="nombre_resena" type="text" class="form-control" placeholder="Ej. Juan Pérez / Local Comercial" required maxlength="50" style="padding: 0.75rem 1rem;">
             </div>
+
             <div class="form-group mb-3">
-              <label>Calificación del servicio <span class="req-star">*</span></label>
+              <label style="font-size: 0.9rem;">Calificación del servicio <span class="req-star">*</span></label>
               <div class="rating-stars" style="display: flex; gap: 8px; font-size: 1.5rem; cursor: pointer; color: #cbd5e1; margin-top: 5px;">
-                <span class="star" data-value="1">★</span><span class="star" data-value="2">★</span><span class="star" data-value="3">★</span><span class="star" data-value="4">★</span><span class="star" data-value="5">★</span>
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
               </div>
               <input type="hidden" id="puntuacion_estrellas" value="5" required>
             </div>
+
             <div class="form-group mb-4">
-              <label for="comentario_resena">Comentario o reseña <span class="req-star">*</span></label>
-              <textarea id="comentario_resena" rows="3" class="form-control" placeholder="¿Cómo fue la atención a domicilio?" required maxlength="250"></textarea>
+              <label for="comentario_resena" style="font-size: 0.9rem;">Comentario o reseña <span class="req-star">*</span></label>
+              <textarea id="comentario_resena" rows="3" class="form-control" placeholder="¿Cómo fue la atención a domicilio y el soporte técnico?" required maxlength="250" style="padding: 0.75rem 1rem;"></textarea>
             </div>
-            <button type="submit" class="btn btn-accent btn-full" style="width: 100%; padding: 12px;">Enviar Reseña</button>
+
+            <button type="submit" class="btn btn-accent btn-full" style="width: 100%; padding: 12px;">
+              Enviar Reseña
+            </button>
           </form>
 
           <div id="mensaje-exito" style="display: none; margin-top: 20px; padding: 25px; background: rgba(37, 211, 102, 0.12); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 16px; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">🎉</div>
             <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 8px;">¡Muchas gracias por tu reseña!</h3>
-            <button type="button" id="btn-otra-resena" class="btn btn-ghost" style="width: 100%; padding: 10px; border-color: #25d366; color: #25d366;">¿Quieres dejar otra reseña?</button>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">Tu opinión ya se encuentra publicada en el carrusel inferior.</p>
+            <button type="button" id="btn-otra-resena" class="btn btn-ghost" style="width: 100%; padding: 10px; border-color: #25d366; color: #25d366;">
+              ¿Quieres dejar otra reseña?
+            </button>
           </div>
         </div>
 
+        <!-- COLUMNA DERECHA: PREGUNTAS FRECUENTES (10 PREGUNTAS) -->
         <div class="faq-right-column">
           <div style="margin-bottom: 24px;">
             <span class="eyebrow">DUDAS FRECUENTES</span>
-            <h2>Antes de contratar</h2>
+            <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Antes de contratar</h2>
+            <p class="section-lead" style="margin-bottom: 0;">Respuestas claras para que pases de la web a una cotización en un clic.</p>
           </div>
+
           <div class="faq-list">
-            <details class="faq-item" open><summary>¿Van a domicilio o tienen local físico?</summary><p>Atendemos a domicilio y con recogida temporal de equipos. No hay sede abierta al público[cite: 10].</p></details>
-            <details class="faq-item"><summary>¿Con qué equipos o marcas trabajan?</summary><p>Proveemos los equipos necesarios para la instalación contratada (cámaras, cerraduras, cableado) según el proyecto[cite: 10].</p></details>
+            <details class="faq-item" open>
+              <summary>¿Van a domicilio o tienen local físico?</summary>
+              <p>Atendemos a domicilio y con recogida temporal de equipos. No hay sede abierta al público; por eso este sitio no incluye mapa</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuáles son los tiempos de instalación de CCTV, redes o puntos POS?</summary>
+              <p>Dependen del alcance (número de cámaras o puntos, cableado existente y acceso al sitio). En la cotización te indicamos el tiempo estimado para tu caso. Escríbenos por WhatsApp para agendar la visita.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Con qué equipos o marcas trabajan?</summary>
+              <p>No operamos como tienda de marcas fijas. Proveemos los equipos necesarios para la instalación contratada (cámaras, cerraduras, cableado y afines) y te proponemos lo adecuado en la cotización, según el proyecto</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿La cotización incluye cableado y configuración?</summary>
+              <p>La cotización detalla lo que entra en el trabajo: equipos, cableado e instalación o configuración cuando apliquen al servicio contratado. Lo dejamos explícito antes de iniciar.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿La visita o el diagnóstico tienen costo?</summary>
+              <p>Varía según el servicio y el desplazamiento. Te confirmamos el valor al solicitar la visita por WhatsApp, antes de ir.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué cubre la garantía de CCTV?</summary>
+              <p>Los sistemas de CCTV incluyen 1 año de garantía según el plan (Básico: 4 cámaras IP; Empresarial: 16 o más cámaras y servidor cloud) Cubre el respaldo técnico del trabajo instalado de acuerdo con ese plan.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Ofrecen soporte después de la instalación?</summary>
+              <p>Sí. El respaldo técnico está incluido según el plan. También puedes contratar mantenimiento preventivo y soporte especializado en sitio o remoto para mantener la operación estable</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuál es el servicio con mayor demanda?</summary>
+              <p>Seguridad electrónica: CCTV, control de acceso, alarmas y soluciones relacionadas</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Venden equipos sueltos como tienda?</summary>
+              <p>No. No somos almacén de venta masiva. Proveemos cámaras, cerraduras, cableado y demás insumos necesarios para ejecutar las instalaciones contratadas</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cómo solicito un servicio?</summary>
+              <p>Usa el formulario de esta página o escríbenos al WhatsApp +57 321 7823068. También puedes escribir a jagstechnology@gmail.com o a Instagram @jagstechnologi. Horario: lunes a sábado, 9:00 a. m. – 6:00 p. m.</p>
+            </details>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- CARRUSEL INFINITO DE RESEÑAS -->
-    <section class="section section-dark testimonials-marquee-section">
+    <!-- SECCIÓN 2: CARRUSEL INFINITO DE RESEÑAS (ANCHO TOTAL) -->
+    <section id="resenas" class="section section-dark testimonials-marquee-section" aria-labelledby="testimoniales-title">
       <div class="container section-head">
         <p class="eyebrow">OPINIONES DE NUESTROS CLIENTES</p>
-        <h2>Lo que dicen de Jags Technology</h2>
+        <h2 id="testimoniales-title">Lo que dicen de Jags Technology</h2>
+        <p class="section-lead">Reseñas reales de locales comerciales y hogares que han confiado en nuestro servicio a domicilio en Medellín.</p>
       </div>
+
       <div class="marquee-container">
         <div class="marquee-track marquee-left" id="marquee-line-1"></div>
         <div class="marquee-track marquee-right" id="marquee-line-2"></div>
       </div>
     </section>
 
-    <!-- DATOS DE CONTACTO -->
-    <section id="contacto" class="section section-contact">
+    <!-- SECCIÓN 3: CONTACTO / CTA (ANCHO TOTAL) -->
+    <section id="contacto" class="section section-contact" aria-labelledby="contacto-title">
       <div class="container">
         <div class="contact-grid">
+          
           <div class="contact-cta-card">
             <span class="subheading-sm">COTIZACIONES EN LÍNEA</span>
             <h2>¿Necesitas una cotización a tu medida?</h2>
-            <p class="section-desc">Accede a nuestra plataforma de formularios para solicitar la cotización del servicio o mantenimiento que requieres.</p>
-            <a href="Formulario.html" class="btn btn-accent btn-full text-center">Ir a solicitar cotización</a>
+            <p class="section-desc">
+              Accede a nuestra plataforma de formularios para solicitar la cotización del servicio o mantenimiento que requieres.
+            </p>
+            <a href="Formulario.html" class="btn btn-accent btn-full text-center">
+              Ir a solicitar cotización
+            </a>
           </div>
+
           <address class="contact-card">
             <img class="contact-logo" src="assets/img/logo-escudo.png" width="56" height="56" alt="">
             <h3 class="not-italic">Jags Technology</h3>
+            <p class="tagline-sm">Innovación, soporte y solución a tu alcance.</p>
             <dl class="contact-list">
-              <div><dt>WhatsApp</dt><dd><a href="https://wa.me/573217823068">+57 321 7823068</a></dd></div>
-              <div><dt>Correo</dt><dd><a href="mailto:jagstechnology@gmail.com">jagstechnology@gmail.com</a></dd></div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/573217823068">+57 321 7823068</a></dd>
+              </div>
+              <div>
+                <dt>Correo</dt>
+                <dd><a href="mailto:jagstechnology@gmail.com">jagstechnology@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>Instagram</dt>
+                <dd><a href="https://www.instagram.com/jagstechnologi/" target="_blank" rel="noopener noreferrer">@jagstechnologi</a></dd>
+              </div>
             </dl>
           </address>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="site-footer">
+  <!-- FOOTER ABAJO DE TODO -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <div class="footer-brand"><p><strong>Jags Technology</strong> · Contacto</p></div>
-      <nav><a href="index.html">Inicio</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a></nav>
+      <div class="footer-brand">
+        <img src="assets/img/logo-escudo.png" width="40" height="40" alt="">
+        <div>
+          <p><strong>Jags Technology</strong> · Medellín</p>
+          <p class="muted">Web multipágina · CESDE Desarrollo Web</p>
+        </div>
+      </div>
+      <p class="muted footer-team">Equipo: Erika Vázquez · Javier Gómez · Juan Camilo · Xiomara Muñoz · Maryluz Cardona[cite: 10]</p>
+      <nav aria-label="Pie">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="planes.html">Planes</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
   </footer>
+
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
